@@ -1,12 +1,4 @@
-html {
-  font-size: 14px;
-}
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
 
 html {
   position: relative;
@@ -65,13 +57,18 @@ body {
 }
 
 .navigation-bar a {
-    float: right;
     color: rgb(171, 168, 168);
     text-decoration: none;
     font-size: 17px;
     font-weight: 700;
     overflow: hidden;
     padding: 4px 20px;
+}
+
+@media(min-width: 1199px) {
+    .navigation-bar a {
+        float: right;
+    }
 }
 
 .navigation-bar .watch-only {
@@ -86,9 +83,17 @@ body {
     transition: transform 0.3s;
 }
 
+@media(max-width: 1199px) {
+    #my-name {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        transition: all 0.5s ease-out;
+    }
+}
+
 .navigation-bar a span::before {
     position: absolute;
-    top: 100%;
+    top: 100%; 
     font-weight: 700;
     -webkit-transform: translate3d(0,0,0);
     -moz-transform: translate3d(0,0,0);
@@ -133,7 +138,21 @@ a:is(:link, :active, :visited).active {
 }
 
 .navbar-toggler {
-    border: 0px solid #101010;
+    position: relative;
+    left: 20px;
+    transition: all 0.5s ease-out;
+}
+
+@media(max-width: 720px) {
+    .navbar-toggler {
+        left: 35px;
+    }
+
+    #my-name {
+        transition: all 0.5s ease-out;
+        position: relative;
+        margin-left: -25px;
+    }
 }
 
 .navbar-toggler span {
