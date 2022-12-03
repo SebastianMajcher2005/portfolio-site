@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-3 navigation-bar">
+        <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-light box-shadow mb-3 navigation-bar">
             <div class="container-fluid">
                 <a class="navbar-brand watch-only" id="my-name">
                     <span id="first-name">Sebastian</span> 
@@ -18,25 +18,27 @@
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="navbar-collapse collapse d-xl-inline-flex link-box">
+                    <ul class="navbar-nav flex-grow-1 ul-box">
                         <li class="nav-item">
-                            <a class="link-page " asp-area="" asp-controller="Home" asp-action="Index"><span>HOME</span></a>
+                            <a class="link-page home-link" asp-area="" asp-controller="Home" asp-action="Index"><span>HOME</span></a>
                         </li>
                         <li class="nav-item link-animation">
-                            <a class="link-page" asp-area="" asp-controller="" asp-action=""><span>PORTFOLIO</span></a>
+                            <a class="link-page portfolio-link" asp-area="" asp-controller="" asp-action=""><span>PORTFOLIO</span></a>
+                        </li>
+                        <li class="nav-item link-animation about-link">
+                            <a class="link-page about-link" asp-area="" asp-controller="" asp-action=""><span>ABOUT</span></a>
                         </li>
                         <li class="nav-item link-animation">
-                            <a class="link-page" asp-area="" asp-controller="" asp-action=""><span>ABOUT</span></a>
+                            <a class="link-page contact-link" asp-area="" asp-controller="" asp-action=""><span>CONTACT</span></a>
                         </li>
-                        <li class="nav-item link-animation">
-                            <a class="link-page" asp-area="" asp-controller="" asp-action=""><span>CONTACT</span></a>
-                        </li>
-                        
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>

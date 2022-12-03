@@ -36,7 +36,7 @@ body {
     padding-left: 40px;
 }
 
-@media(min-width: 1199px) {
+@media(min-width: 1200px) {
     .navigation-bar {
         height: 100px;
     }
@@ -48,7 +48,7 @@ body {
 
 #first-name, #second-name {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #second-name {
@@ -70,11 +70,12 @@ body {
     text-decoration: none;
     font-size: 17px;
     font-weight: 700;
+    overflow: hidden;
+    padding: 4px 20px;
 }
 
-.navigation-bar a {
-    overflow: hidden;
-    padding: 0px 0px;
+.navigation-bar .watch-only {
+    padding: 3px 0px;
 }
 
 .navigation-bar a span {
@@ -83,7 +84,7 @@ body {
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
-    }
+}
 
 .navigation-bar a span::before {
     position: absolute;
@@ -93,7 +94,6 @@ body {
     -moz-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
     color: white;
-    content: 'sdgds';
 }
 
 .navigation-bar a:hover span, .navigation-bar a:focus span {
@@ -105,4 +105,84 @@ body {
 
 .watch-only {
     cursor: pointer;
+}
+
+.home-link span::before {
+    content: 'HOME';
+}
+
+.portfolio-link span::before {
+    content: 'PORTFOLIO';
+}
+
+.about-link span::before {
+    content: 'ABOUT';
+}
+
+.contact-link span::before {
+    content: 'CONTACT';
+}
+
+a:is(:link, :active, :visited).active {
+    color: white;
+}
+
+.ul-box {
+    position:relative;
+    justify-content: right;
+}
+
+.navbar-toggler {
+    border: 0px solid #101010;
+}
+
+.navbar-toggler span {
+    display: block;
+    height: 2px;
+    width: 25px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.2s ease-out;
+    transform-origin: center left;
+    background-color: white;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg);
+}
+
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg);
+}
+
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg);
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
 }
