@@ -26,6 +26,8 @@ body {
     background: #101010;
     padding-right: 40px;
     padding-left: 40px;
+    position: fixed;
+    width: 100%;
 }
 
 @media(min-width: 1200px) {
@@ -155,6 +157,14 @@ a:is(:link, :active, :visited).active {
     }
 }
 
+.navbar-toggler {
+    border: 0;
+    box-shadow: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
 .navbar-toggler span {
     display: block;
     height: 2px;
@@ -205,3 +215,4 @@ a:is(:link, :active, :visited).active {
     outline: none;
     box-shadow: none;
 }
+

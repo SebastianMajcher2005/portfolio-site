@@ -2,3 +2,10 @@
 *.dll
 *.pdb
 *.sentinel
+*.vsidx
+*.v1
+*.v2
+*.dll
+*.dll
+*.pdb
+*.pdb
