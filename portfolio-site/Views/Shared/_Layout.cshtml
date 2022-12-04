@@ -10,13 +10,13 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-light box-shadow mb-3 navigation-bar">
+        <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-light box-shadow mb-3 navigation-bar" id="navbar">
             <div class="container-fluid">
                 <a class="navbar-brand watch-only" id="my-name">
                     <span id="first-name">Sebastian</span> 
                     <span id="second-name">Majcher</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -32,6 +32,14 @@
                         </li>
                         <li class="nav-item link-animation about-link">
                             <a class="link-page about-link" asp-area="" asp-controller="" asp-action=""><span>ABOUT</span></a>
+                            <ul>
+                                <li class="nav-item link-animation li-sign">
+                                    <a class="link-page cooperation-link dropdown-link" asp-area="" asp-controller="" asp-action=""><span>COOPERATION</span></a>
+                                </li>
+                                <li class="nav-item link-animation li-sign">
+                                    <a class="link-page my-career-path-link dropdown-link" asp-area="" asp-controller="" asp-action=""><span>MY CAREER PATH</span></a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item link-animation">
                             <a class="link-page contact-link" asp-area="" asp-controller="" asp-action=""><span>CONTACT</span></a>
@@ -49,7 +57,7 @@
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

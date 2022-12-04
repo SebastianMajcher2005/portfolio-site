@@ -14,8 +14,8 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: #bbb;
-/*    background: #101010;
-*/  letter-spacing: 0;
+    background: #101010;
+    letter-spacing: 0;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,17 +23,11 @@ body {
 }
 
 .navigation-bar {
-    background: #101010;
     padding-right: 40px;
     padding-left: 40px;
     position: fixed;
     width: 100%;
-}
-
-@media(min-width: 1200px) {
-    .navigation-bar {
-        height: 100px;
-    }
+    transition: all 0.5s ease-out;
 }
 
 #first-name {
@@ -87,8 +81,6 @@ body {
 
 @media(max-width: 1199px) {
     #my-name {
-        margin-top: 25px;
-        margin-bottom: 25px;
         transition: all 0.5s ease-out;
     }
 }
@@ -128,6 +120,14 @@ body {
 
 .contact-link span::before {
     content: 'CONTACT';
+}
+
+.cooperation-link span::before {
+    content: 'COOPERATION';
+}
+
+.my-career-path-link span::before {
+    content: 'MY CAREER PATH';
 }
 
 a:is(:link, :active, :visited).active {
@@ -216,3 +216,45 @@ a:is(:link, :active, :visited).active {
     box-shadow: none;
 }
 
+.navbar ul li ul {
+    position: absolute;
+    margin-top: 35px;
+    display: none;
+    background: #1E1E1E;
+
+    /* hides sublists */
+}
+
+.navbar li:hover ul ul {
+    display: none;
+}
+
+
+/* hides sub-sublists */
+
+.navbar li:hover ul {
+    display: block;
+}
+
+
+/* shows sublist on hover */
+
+.navbar li li:hover ul {
+    display: block;
+    /* shows sub-sublist on hover */
+    /* this should be the same width as the parent list item */
+    /* aligns top of sub menu with top of list item */
+}
+
+.li-sign {
+    list-style-type: none;
+}
+
+.dropdown-link {
+    font-size: 10px;
+}
+
+.link-page span {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
