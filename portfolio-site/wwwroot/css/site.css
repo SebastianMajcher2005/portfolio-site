@@ -79,6 +79,11 @@ body {
     transition: transform 0.3s;
 }
 
+#my-name {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 @media(max-width: 1199px) {
     #my-name {
         transition: all 0.5s ease-out;
