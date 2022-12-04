@@ -254,7 +254,3 @@ a:is(:link, :active, :visited).active {
     font-size: 10px;
 }
 
-.link-page span {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
