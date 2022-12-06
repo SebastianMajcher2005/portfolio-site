@@ -17,3 +17,4 @@ const btn = document.getElementById('navbar-toggler');
 btn.addEventListener('click', function onClick() {
         document.getElementById("navbar").style = "background: #101010;";
 });
+
