@@ -381,13 +381,6 @@ a:is(:link, :active, :visited).active {
         max-width: 849px;
         width: 90%;
         height: 120px;
-        margin-bottom: 300px;
-    }
-}
-
-@media (max-width: 767px) {
-    .links {
-        margin-bottom: 300px;
     }
 }
 
