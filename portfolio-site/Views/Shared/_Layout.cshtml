@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/portfolio_site.styles.css" asp-append-version="true" />
+    <link rel="icon" href="~/favicon.ico"/>
 </head>
 <body>
     <div id="lines">
@@ -15,22 +16,6 @@
         <div class="line" id="first-hide-line"></div>
         <div class="line" id="second-responsive-line"></div>
         <div class="line" id="second-hide-line"></div>
-    </div>
-     <div class="sticky-email">
-        E: <a href="mailto:sebastianmajcher2005@gmail.com"> sebastianmajcher2005@gmail.com</a>
-    </div>
-    <div class="follow-me">
-        <p>Follow Me</p>
-        <hr id="line"/>
-        <a href="https://www.linkedin.com/in/sebastian-majcher/" id="linkedin">
-            <i class='fa fa-linkedin'></i>
-        </a>
-        <a target="_blank" href="https://github.com/SebastianMajcher2005" id="github">
-            <i class='fa fa-github'></i>
-        </a>
-        <a target="_blank" href="https://twitter.com/sebastianmjcher" id="twitter">
-            <i class='fa fa-twitter'></i>
-        </a>
     </div>
     <header>
         <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-light box-shadow mb-3 navigation-bar" id="navbar">
@@ -80,7 +65,22 @@
             @RenderBody()
         </main>
     </div>
-
+     <div class="sticky-email">
+        E: <a href="mailto:sebastianmajcher2005@gmail.com"> sebastianmajcher2005@gmail.com</a>
+    </div>
+    <div class="follow-me">
+        <p>Follow Me</p>
+        <div id="line"></div>
+        <a href="https://www.linkedin.com/in/sebastian-majcher/" id="linkedin">
+            <i class='fa fa-linkedin'></i>
+        </a>
+        <a target="_blank" href="https://github.com/SebastianMajcher2005" id="github">
+            <i class='fa fa-github'></i>
+        </a>
+        <a target="_blank" href="https://twitter.com/sebastianmjcher" id="twitter">
+            <i class='fa fa-twitter'></i>
+        </a>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js"></script>

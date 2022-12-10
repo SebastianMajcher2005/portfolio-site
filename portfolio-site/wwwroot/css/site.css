@@ -164,12 +164,6 @@ a:is(:link, :active, :visited).active {
     justify-content: right;
 }
 
-.navbar-toggler {
-    position: relative;
-    left: 20px;
-    transition: all 0.5s ease-out;
-}
-
 @media(max-width: 767px) {
     .navbar-toggler {
         left: 35px;
@@ -185,10 +179,9 @@ a:is(:link, :active, :visited).active {
 .navbar-toggler {
     border: 0;
     box-shadow: none;
-}
-
-.navbar-toggler:focus {
-    box-shadow: none;
+    position: relative;
+    left: 20px;
+    transition: all 0.5s ease-out;
 }
 
 .navbar-toggler span {
@@ -341,7 +334,7 @@ a:is(:link, :active, :visited).active {
     font-weight: 500;
 }
 
-#first-section > p {
+#first-section p {
     margin-left: -430px;
     padding-left: 35px;
     position: absolute;
@@ -371,16 +364,11 @@ a:is(:link, :active, :visited).active {
     }
 }
 
-
-
 @media (max-width: 1199px) {
     #first-section > p {
         display: none;
     }
 }
-
-
-
 
 .links {
     width: 850px;
@@ -392,17 +380,25 @@ a:is(:link, :active, :visited).active {
     z-index: 1;
     background-color: #101010;
     margin-top: 70px;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 @media (max-width: 1199px) {
     .links {
         position: absolute;
         width: 90%;
+        max-width: 849px;
         height: 120px;
+        margin-top: 70px;
     }
     #second-section {
-        height: 300px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 767px) {
+    .links {
+        margin-top: 50px;
     }
 }
 
@@ -412,15 +408,14 @@ a:is(:link, :active, :visited).active {
     outline: none;
     font-size: 16px;
     margin-left: 30px;
+    position: relative;
 }
 
 .links #cooperation > a {
-    position: relative;
     top: 30px;
 }
 
 .links #my-career-path > a {
-    position: relative;
     top: 10px;
 }
 
@@ -480,7 +475,6 @@ a:is(:link, :active, :visited).active {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .sticky-email a {
@@ -491,6 +485,8 @@ a:is(:link, :active, :visited).active {
 .sticky-email {
     font-size: 14px;
     color: rgb(171, 168, 168);
+    margin-top: 100px;
+    bottom: 60px;
 }
 
 .follow-me p {
@@ -498,16 +494,24 @@ a:is(:link, :active, :visited).active {
     display: none;
 }
 
-.follow-me, .sticky-email {
-    position: absolute;
-    bottom: 0;
+@media (max-width: 1199px) {
+    .follow-me, .sticky-email {
+        position: relative;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .follow-me {
+        bottom: 50px;
+    }
 }
 
 #line {
     width: 50px;
     height: 1px;
-    border: 1px solid white;
-    background: white;
+    background: #fff;
     display: none;
 }
 
@@ -515,35 +519,34 @@ a:is(:link, :active, :visited).active {
     font-size: 18px;
     font-weight: 400;
     color: #bbb;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-#linkedin:hover, #github:hover, #twitter:hover {
-    color: #56FEA8;
-}
-
-.sticky-email a:hover {
+#linkedin:hover, #github:hover, #twitter:hover, .sticky-email a:hover {
     color: #56FEA8;
 }
 
 /* email */
-@media(min-width: 1199px) {
+@media(min-width: 1200px) {
     .sticky-email {
         position: fixed;
         bottom: 50px;
         left: 50px;
+        width: auto;
     }
 
     /* social media */
     .follow-me {
         position: fixed;
-        width: 200px;
+        width: auto;
         height: 40px;
         -moz-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         -o-transform: rotate(90deg);
         -webkit-transform: rotate(90deg);
-        bottom: 210px;
-        right: -30px;
+        bottom: 275px;
+        right: 30px;
     }
 
     #line {
