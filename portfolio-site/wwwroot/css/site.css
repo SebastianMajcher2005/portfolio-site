@@ -356,7 +356,22 @@ a:is(:link, :active, :visited).active {
     font-size: 16px;
     color: #bbb;
     margin-bottom: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: animated-text 2s steps(29,end) 1s 1 normal both;
 }
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 350px;
+    }
+}
+
+
 
 @media (max-width: 1199px) {
     #first-section > p {
@@ -468,32 +483,24 @@ a:is(:link, :active, :visited).active {
     position: relative;
 }
 
-/* email */
+.sticky-email a {
+    color: white;
+    font-weight: 400;
+}
 
 .sticky-email {
-    position: fixed;
-    bottom: 50px;
-    left: 50px;
     font-size: 14px;
     color: rgb(171, 168, 168);
 }
 
-.sticky-email a {
-    color: white;
-	font-weight: 400;
+.follow-me p {
+    font-size: 14px;
+    display: none;
 }
 
-/* social media */
-.follow-me {
-    position: fixed;
-    width: 200px;
-    height: 40px;
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    bottom: 210px;
-    right: -30px;
+.follow-me, .sticky-email {
+    position: absolute;
+    bottom: 0;
 }
 
 #line {
@@ -501,36 +508,70 @@ a:is(:link, :active, :visited).active {
     height: 1px;
     border: 1px solid white;
     background: white;
-    position: fixed;
-    margin-top: -27px;
-    margin-left: 85px;
-}
-
-.follow-me p {
-    font-size: 14px;
+    display: none;
 }
 
 #linkedin, #github, #twitter {
-    position: fixed;
-    margin-top: -40px;
     font-size: 18px;
     font-weight: 400;
     color: #bbb;
-    transform: rotate(-90deg);
 }
 
-#linkedin:hover ,#github:hover, #twitter:hover {
+#linkedin:hover, #github:hover, #twitter:hover {
     color: #56FEA8;
 }
 
-#linkedin {
-    margin-left: 160px;
+.sticky-email a:hover {
+    color: #56FEA8;
 }
 
-#github {
-    margin-left: 210px;
-}
+/* email */
+@media(min-width: 1199px) {
+    .sticky-email {
+        position: fixed;
+        bottom: 50px;
+        left: 50px;
+    }
 
-#twitter {
-    margin-left: 260px;
+    /* social media */
+    .follow-me {
+        position: fixed;
+        width: 200px;
+        height: 40px;
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        bottom: 210px;
+        right: -30px;
+    }
+
+    #line {
+        position: fixed;
+        margin-top: -27px;
+        margin-left: 85px;
+        display: block;
+    }
+
+    .follow-me p {
+        display: block;
+    }
+
+    #linkedin, #github, #twitter {
+        position: fixed;
+        margin-top: -40px;
+        transform: rotate(-90deg);
+    } 
+
+    #linkedin {
+        margin-left: 160px;
+    }
+
+    #github {
+        margin-left: 210px;
+    }
+
+    #twitter {
+        margin-left: 260px;
+    }
 }
