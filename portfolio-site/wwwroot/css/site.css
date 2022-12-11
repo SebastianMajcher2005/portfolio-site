@@ -433,10 +433,10 @@ a:is(:link, :active, :visited).active {
     text-align: left;
     display: grid;
     place-items: left;
-    z-index: 1;
     background-color: #101010;
     margin-top: 70px;
     margin-bottom: 70px;
+    z-index: 0;
 }
 
 @media (max-width: 1199px) {
@@ -468,7 +468,7 @@ a:is(:link, :active, :visited).active {
 }
 
 .links #cooperation > a {
-    top: 30px;
+    top: 25px;
 }
 
 .links #my-career-path > a {

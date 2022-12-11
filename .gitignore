@@ -4,3 +4,6 @@
 *.sentinel
 portfolio-site/bin/Debug/net6.0/portfolio-site.dll
 *.vsidx
+*.sentinel
+*.dll
+*.dll
