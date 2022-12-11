@@ -64,10 +64,10 @@ body {
 
 .hover {
     background-color: #56FEA8;
-    opacity: 0.5;
+    opacity: 0.2;
     z-index: 101;
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 80px;
 }
 
 .cursorinnerhover {
