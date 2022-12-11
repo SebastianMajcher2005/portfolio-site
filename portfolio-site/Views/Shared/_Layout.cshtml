@@ -4,11 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Sebastian Majcher</title>
+     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/portfolio_site.styles.css" asp-append-version="true" />
+    <link rel="icon" href="~/favicon.ico"/>
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <div id="lines">
+        <div class="line" id="first-responsive-line" ></div>
+        <div class="line" id="first-hide-line"></div>
+        <div class="line" id="second-responsive-line"></div>
+        <div class="line" id="second-hide-line"></div>
+    </div>
     <header>
         <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-light box-shadow mb-3 navigation-bar" id="navbar">
             <div class="container-fluid">
@@ -25,42 +35,53 @@
                 <div class="navbar-collapse collapse d-xl-inline-flex link-box">
                     <ul class="navbar-nav flex-grow-1 ul-box">
                         <li class="nav-item">
-                            <a class="link-page home-link" asp-area="" asp-controller="Home" asp-action="Index"><span>HOME</span></a>
+                            <a class="link-page home-link" asp-controller="Home" asp-action="Index"><span>HOME</span></a>
                         </li>
                         <li class="nav-item link-animation">
-                            <a class="link-page portfolio-link" asp-area="" asp-controller="" asp-action=""><span>PORTFOLIO</span></a>
+                            <a class="link-page portfolio-link" asp-controller="" asp-action=""><span>PORTFOLIO</span></a>
                         </li>
                         <li class="nav-item link-animation about-link">
-                            <a class="link-page about-link" asp-area="" asp-controller="" asp-action=""><span>ABOUT 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white" class="bi bi-chevron-down" viewBox="0 0 15 15">
-                                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                                </svg>
-                            </span>
-                            </a>
+                            <a class="link-page about-link" asp-controller="About" asp-action="Index"><span>ABOUT <i class="fa fa-chevron-down"></i></span></a>
                             <ul>
                                 <li class="nav-item link-animation li-sign">
-                                    <a class="link-page cooperation-link" asp-area="" asp-controller="" asp-action=""><span>COOPERATION</span></a>
+                                    <a class="link-page cooperation-link" asp-controller="" asp-action=""><span>COOPERATION</span></a>
                                 </li>
                                 <li class="li-sign">
                                     <div id="dropdown-line"></div>
                                 </li>
                                 <li class="nav-item link-animation li-sign">
-                                    <a class="link-page my-career-path-link" asp-area="" asp-controller="" asp-action=""><span>MY CAREER PATH</span></a>
+                                    <a class="link-page my-career-path-link" asp-controller="" asp-action=""><span>MY CAREER PATH</span></a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item link-animation">
-                            <a class="link-page contact-link" asp-area="" asp-controller="" asp-action=""><span>CONTACT</span></a>
+                            <a class="link-page contact-link" asp-controller="" asp-action=""><span>CONTACT</span></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div>
+        <main>
             @RenderBody()
         </main>
+    </div>
+     <div class="sticky-email">
+        E: <a href="mailto:sebastianmajcher2005@gmail.com"> sebastianmajcher2005@gmail.com</a>
+    </div>
+    <div class="follow-me">
+        <p>Follow Me</p>
+        <div id="line"></div>
+        <a href="https://www.linkedin.com/in/sebastian-majcher/" id="linkedin">
+            <i class='fa fa-linkedin'></i>
+        </a>
+        <a target="_blank" href="https://github.com/SebastianMajcher2005" id="github">
+            <i class='fa fa-github'></i>
+        </a>
+        <a target="_blank" href="https://twitter.com/sebastianmjcher" id="twitter">
+            <i class='fa fa-twitter'></i>
+        </a>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
