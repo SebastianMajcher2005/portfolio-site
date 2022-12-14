@@ -636,7 +636,7 @@ a:is(:link, :active, :visited).active {
 }
 
 
-/* my career path site */
+/* my career path page */
 #story {
     width: 850px;
     margin-top: 70px;
@@ -652,7 +652,13 @@ a:is(:link, :active, :visited).active {
 
 @media (max-width: 1199px) {
     #story {
-        max-width: 849px;
+        max-width: 850px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 767px) {
+    #story {
         width: 90%;
     }
 }
@@ -689,3 +695,5 @@ a:is(:link, :active, :visited).active {
     color: #bbb;
     text-align: left;
 }
+
+/* cooperation page */
