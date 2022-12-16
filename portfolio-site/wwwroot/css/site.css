@@ -408,7 +408,7 @@ a:is(:link, :active, :visited).active {
     white-space: nowrap;
     overflow: hidden;
     animation: animated-text 2s steps(29,end) 1s 1 normal both;
-    margin-top: 500px;
+    margin-top: 80vh;
 }
 
 @keyframes animated-text {
@@ -637,7 +637,7 @@ a:is(:link, :active, :visited).active {
 
 
 /* my career path page */
-#story {
+.content-container {
     width: 850px;
     margin-top: 70px;
     height: auto;
@@ -651,19 +651,19 @@ a:is(:link, :active, :visited).active {
 }
 
 @media (max-width: 1199px) {
-    #story {
+    .content-container {
         max-width: 850px;
         width: 95%;
     }
 }
 
 @media (max-width: 767px) {
-    #story {
+    .content-container {
         width: 90%;
     }
 }
 
-#story > h3 {
+.headline {
     margin-top: 100px;
     margin-bottom: 40px;
     margin-right: 30px;
@@ -672,7 +672,7 @@ a:is(:link, :active, :visited).active {
     color: white;
 }
 
-#description {
+.description {
     border: 1px solid rgba(255, 255, 255, 0.07);
     width: 90%;
     height: auto;
@@ -681,19 +681,286 @@ a:is(:link, :active, :visited).active {
 }
 
 @media (max-width: 767px) {
-    #description {
+    .description {
         width: 80%;
     }
-    #story {
+    .content-container {
         margin-top: 50px;
     }
 }
 
-#description > p {
+.description > p:not(.font-description) {
     font-size: 14px;
     font-weight: 400;
     color: #bbb;
     text-align: left;
 }
 
+.font-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #bbb;
+    text-align: left;
+}
 /* cooperation page */
+.about-content {
+    margin-top: 100px;
+    height: 400px;
+    width: 850px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: #101010;
+    z-index: 0;
+    max-width: 850px;
+}
+#about-me {
+    width: 199px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+#about-me-description {
+    width: auto;
+    max-width: 643px;
+    height: 100%;
+    float: left;
+    text-align: left;
+    padding-right: 40px;
+    padding-left: 20px;
+    padding-top: 100px;
+}
+
+#about-me-title {
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+
+#image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    overflow: hidden;
+    background: gray;
+    margin-bottom: 120px;
+}
+
+@media (max-width: 1199px) {
+    .about-content {
+        width: 90%;
+    }
+    #about-me {
+        max-width: 199px;
+        max-width: 25%;
+    }
+    #about-me-description {
+        max-width: 649px;
+        max-width: 75%;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-content {
+        height: auto;
+        min-height: 400px;
+        min-width: auto;
+    }
+
+    #about-me {
+        width: 100%;
+        max-width: 849px;
+        height: 150px;
+    }
+
+    #about-me-description {
+        width: 100%;
+        max-width: 849px;
+        text-align: center;
+        padding-top: 0;
+        min-height: 250px;
+        height: auto;
+        margin-top: 50px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    #image {
+        width: 100px;
+        height: 100px;
+    }
+
+    #about-me-title {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+.info-div {
+    float: left;
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.part-info-div {
+    width: 50%;
+    float: left;
+}
+.green {
+    color: #4bffa5;
+}
+
+@media(max-width: 767px) {
+    .part-info-div {
+        width: 100%;
+    }
+    .info-div {
+        height: auto;
+        margin: 0;
+    }
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 8px 30px;
+    background: #101010;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    border: 2px solid #4bffa5;
+    border-radius: 0;
+    margin-top: 25px;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+    color: #4bffa5;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn:hover span {
+    color: #101010;
+    transition: 0.5s ease-in-out;
+}
+
+.btn::before {
+    content: '';
+    position:absolute;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height:0px;
+    border-radius: 50%;
+    background: #4bffa5;
+    transition: width 0.7s, height 0.7s;
+}
+
+.btn:hover::before{
+    width: 500px;
+    height: 500px;
+}
+
+@media(max-width: 767px) {
+    .btn {
+        margin-top: 40px;
+        margin-bottom: 25px;
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    .btn span {
+        font-size: 15px;
+    }
+}
+
+
+.requiments {
+    text-align: left;
+    padding: 40px;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    margin-top: 0;
+}
+
+.content-container li::marker {
+    color: #4bffa5;
+}
+/* talents and intrests */
+.curiosities {
+    max-width: 851px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 800px) {
+    .curiosities {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}
+
+.curiosit {
+    width: 380px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    position: relative;
+    background-color: #101010;
+    margin-top: 30px;
+}
+
+.one, .three {
+    float: left;
+}
+
+.two, .four {
+    float: right;
+}
+
+.five {
+    margin-bottom: 60px;
+}
+
+#talent-five-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.curiosit > h2 {
+    font-size: 17px;
+    color: white;
+}
+
+.curiosit > p {
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #bbb;
+}
+
+@media (max-width: 800px) {
+    .curiosit {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.icon {
+    fill: #4bffa5;
+    width: 30px;
+    margin-bottom: 20px;
+}
