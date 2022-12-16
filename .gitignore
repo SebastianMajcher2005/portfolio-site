@@ -10,3 +10,9 @@ portfolio-site/bin/Debug/net6.0/portfolio-site.dll
 *.sentinel
 portfolio-site/.vs/portfolio-site/v17/.suo
 portfolio-site/.vs/portfolio-site/v17/.suo
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
