@@ -16,3 +16,7 @@ _ReSharper.*
 bin
 obj
 packages
+cache
+v2
+v1 
+dll
