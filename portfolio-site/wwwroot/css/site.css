@@ -444,7 +444,7 @@ a:is(:link, :active, :visited).active {
     .links {
         position: absolute;
         width: 90%;
-        max-width: 849px;
+        max-width: 850px;
         height: 120px;
     }
     #second-section {
@@ -771,13 +771,13 @@ a:is(:link, :active, :visited).active {
 
     #about-me {
         width: 100%;
-        max-width: 849px;
+        max-width: 850px;
         height: 150px;
     }
 
     #about-me-description {
         width: 100%;
-        max-width: 849px;
+        max-width: 850px;
         text-align: center;
         padding-top: 0;
         min-height: 250px;
@@ -1026,6 +1026,7 @@ form > #name, #email-input, #msg {
 #msg {
     resize: none;
     height: 100px;
+    
 }
 form #name, #email-input, #msg:focus{
     outline: none;
@@ -1040,8 +1041,8 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
 }
 @media (max-width: 1199px) {
     #form-div {
-        max-width: 849px;
-        width: 849px;
+        max-width: 850px;
+        width: 850px;
         margin: auto;
         margin-right: 5%;
         margin-left: 5%;
