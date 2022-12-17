@@ -964,3 +964,100 @@ a:is(:link, :active, :visited).active {
     width: 30px;
     margin-bottom: 20px;
 }
+
+.small-section {
+    width: 100%;
+    background-color: #0a0a0a;
+    height: 25vw;
+    justify-content: center;
+    display: grid;
+    place-items: center;
+}
+
+@media (max-width: 1199px) {
+    .small-section {
+        height: 50vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .small-section {
+        height: 60vw;
+    }
+}
+
+#contact-title-container {
+    background: red;
+    width: 250px;
+    height: 100px;
+    right: 275px;
+    margin-top: 90%;
+}
+
+#contact-title {
+    font-size: 44px;
+    line-height: 1.3;
+    font-weight: 500;
+    color: white;
+}
+
+/* mail form */
+#form-div {
+    margin: auto;
+    width: 850px;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background-color: #101010;
+    position: relative;
+    margin-bottom: 70px;
+}
+form > #name, #email-input, #msg {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: #101010;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    color: white;
+    margin-top: 40px;
+}
+#msg {
+    resize: none;
+    height: 100px;
+}
+form #name, #email-input, #msg:focus{
+    outline: none;
+}
+form #name:focus, form #email-input:focus, form #msg:focus {
+    color: white;
+    border-bottom: 1px solid #56FEA8;
+    transition: 500ms;
+}
+form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeholder {
+    color: white;
+}
+@media (max-width: 1199px) {
+    #form-div {
+        max-width: 849px;
+        width: 849px;
+        margin: auto;
+        margin-right: 5%;
+        margin-left: 5%;
+   }
+}
+
+#container-for-form {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-submit {
+    margin-left: 5%;
+    margin-bottom: 40px;
+}
