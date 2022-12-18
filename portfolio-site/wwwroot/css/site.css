@@ -971,7 +971,6 @@ a:is(:link, :active, :visited).active {
     height: 25vw;
     justify-content: center;
     display: grid;
-    place-items: center;
 }
 
 @media (max-width: 1199px) {
@@ -991,7 +990,13 @@ a:is(:link, :active, :visited).active {
     width: 250px;
     height: 100px;
     right: 275px;
-    margin-top: 90%;
+    position: relative;
+}
+
+@media(max-width: 1199px) {
+    #contact-title-container {
+        top: 20vw;
+    }
 }
 
 #contact-title {
@@ -1061,4 +1066,10 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
 .form-submit {
     margin-left: 5%;
     margin-bottom: 40px;
+}
+
+.text-anim {
+    color: #bbb;
+    font-weight: bold;
+    font-size: 17px;
 }
