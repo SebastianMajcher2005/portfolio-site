@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Contact";
 }
 
@@ -28,7 +27,7 @@
             <input id="name" type="text" placeholder="Name" name="name" />
             <input id="email-input" type="email" placeholder="Email" name="email" />
             <textarea id="msg" placeholder="Message" name="text"></textarea>
-            <button type="submit" class="btn form-submit" name="send"><span>Send Message</span></button>
+            <button type="submit" class="btn form-submit" name="send" asp-controller="Contact" asp-action="SendEmail"><span>Send Message</span></button>
         </form>
     </div>
 </div>

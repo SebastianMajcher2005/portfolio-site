@@ -20,6 +20,10 @@ body {
     scroll-behavior: smooth;
 }
 
+.btn:focus {
+    box-shadow: none;
+}
+
 /* cursor */
 .cursor-dot,
 .cursor-dot-outline {
@@ -1089,3 +1093,4 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
     font-weight: bold;
     font-size: 17px;
 }
+
