@@ -4,7 +4,6 @@ html {
 }
 
 body {
-    padding-top: 0;
     margin: 0;
     padding: 0;
     border: none;
@@ -670,6 +669,7 @@ a:is(:link, :active, :visited).active {
     margin-left: 30px;
     font-weight: bold;
     color: white;
+    text-align: center;
 }
 
 .description {
@@ -971,6 +971,7 @@ a:is(:link, :active, :visited).active {
     height: 25vw;
     justify-content: center;
     display: grid;
+    align-items: flex-end;
 }
 
 @media (max-width: 1199px) {
@@ -982,20 +983,29 @@ a:is(:link, :active, :visited).active {
 @media (max-width: 767px) {
     .small-section {
         height: 60vw;
+        justify-content: left;
     }
 }
 
 #contact-title-container {
-    background: red;
     width: 250px;
     height: 100px;
-    right: 275px;
+    right: 250px;
     position: relative;
+    margin-bottom: 50px;
+    text-align: left;
 }
 
 @media(max-width: 1199px) {
     #contact-title-container {
-        top: 20vw;
+        margin-left: 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    #contact-title-container {
+        right: 0;
+        margin-bottom: 0px;
     }
 }
 
@@ -1004,6 +1014,12 @@ a:is(:link, :active, :visited).active {
     line-height: 1.3;
     font-weight: 500;
     color: white;
+}
+
+@media(max-width: 767px) {
+    #contact-title {
+        font-size: 23px;
+    }
 }
 
 /* mail form */
