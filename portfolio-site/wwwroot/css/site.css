@@ -1050,6 +1050,7 @@ a:is(:link, :active, :visited).active {
     background-color: #101010;
     position: relative;
     margin-bottom: 70px;
+    padding-bottom: 70px;
 }
 form > #name, #email-input, #msg {
     width: 90%;
@@ -1098,11 +1099,6 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
     align-items: center;
 }
 
-.form-submit {
-    margin-left: 5%;
-    margin-bottom: 40px;
-}
-
 .text-anim {
     color: #bbb;
     font-weight: bold;
@@ -1111,4 +1107,10 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
 
 .validation-span {
     margin-left: 5%;
+}
+
+#submit-button-container {
+    margin-left: 5%;
+    width: 95%;
+    height: auto;
 }
