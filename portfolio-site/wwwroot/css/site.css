@@ -465,9 +465,7 @@ a:is(:link, :active, :visited).active {
         max-width: 850px;
         height: 120px;
     }
-    #second-section {
-        height: auto;
-    }
+    
 }
 
 @media (max-width: 767px) {
@@ -671,7 +669,7 @@ a:is(:link, :active, :visited).active {
 @media (max-width: 1199px) {
     .content-container {
         max-width: 850px;
-        width: 95%;
+        width: 100%;
     }
 }
 
@@ -769,7 +767,7 @@ a:is(:link, :active, :visited).active {
 
 @media (max-width: 1199px) {
     .about-content {
-        width: 90%;
+        width: 100%;
     }
     #about-me {
         max-width: 199px;
@@ -783,6 +781,7 @@ a:is(:link, :active, :visited).active {
 
 @media (max-width: 767px) {
     .about-content {
+        width: 90%;
         height: auto;
         min-height: 400px;
         min-width: auto;
@@ -1083,7 +1082,7 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
 @media (max-width: 1199px) {
     #form-div {
         max-width: 850px;
-        width: 850px;
+        width: 100%;
         margin: auto;
         margin-right: 5%;
         margin-left: 5%;
