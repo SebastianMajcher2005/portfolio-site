@@ -1,4 +1,5 @@
-﻿@{
+﻿@model portfolio_site.Models.Mail
+@{
     ViewData["Title"] = "Contact";
 }
 
@@ -9,25 +10,31 @@
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script>
             var typed = new Typed(".text-anim", {
-    strings: ["Work together with you.", "Contact with me."],
-    typeSpeed: 100,
-    backSpeed: 25,
-    loop: true
-});
+            strings: ["Work together with you.", "Contact with me."],
+            typeSpeed: 100,
+            backSpeed: 25,
+            loop: true
+            });
         </script>
     </div>
 </div>
 <div id="second-section">
-     
+
 </div>
 <h3 class="headline">Contact Form</h3>
 <div id="container-for-form">
     <div id="form-div">
         <form>
-            <input id="name" type="text" placeholder="Name" name="name" />
-            <input id="email-input" type="email" placeholder="Email" name="email" />
-            <textarea id="msg" placeholder="Message" name="text"></textarea>
-            <button type="submit" class="btn form-submit" name="send" asp-controller="Contact" asp-action="SendEmail"><span>Send Message</span></button>
+            @using (Html.BeginForm("SendEmail", "Contact", FormMethod.Post))
+            {
+                <input id="name" type="text" placeholder="Name" asp-for="Name"/>
+                <span asp-validation-for="Name" class="text-danger validation-span"></span>
+                <input id="email-input" type="email" placeholder="Email" asp-for="Email"/>
+                <span asp-validation-for="Email" class="text-danger validation-span"></span>
+                <textarea id="msg" placeholder="Message" asp-for="Message"></textarea>
+                <span asp-validation-for="Message" class="text-danger validation-span"></span>
+                <button type="submit" class="btn form-submit" asp-controller="Contact" asp-action="SendEmail"><span>Send Message</span></button>
+            }  
         </form>
     </div>
 </div>

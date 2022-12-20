@@ -1,6 +1,7 @@
 ﻿using FluentEmail.Core;
 using FluentEmail.Smtp;
 using Microsoft.AspNetCore.Mvc;
+using portfolio_site.Models;
 using System.Net;
 using System.Net.Mail;
 
@@ -14,7 +15,7 @@ namespace portfolio_site.Controllers
             return View();
         }
 
-        public async Task<IActionResult> SendEmail()
+        public async Task<IActionResult> SendEmail(Mail mail)
         {
             var sender = new SmtpSender(() => new SmtpClient("smtp.gmail.com")
             {
@@ -25,16 +26,22 @@ namespace portfolio_site.Controllers
             });
 
             Email.DefaultSender = sender;
+            if(ModelState.IsValid)
+            {
+                var email = Email
+               .From("sebastianmajcher2005@gmail.com", mail.Name)
+               .To("sebastianmajcher2005@gmail.com", "Sebastian")
+               .Subject(mail.Email)
+               .Body(mail.Message);
 
-            var email = Email
-                .From("sebastianmajcher2005@gmail.com", "sebus")
-                .To("sebastianmajcher2005@gmail.com", "Seba")
-                .Subject("Thanks!")
-                .Body("hahahha");
+                await email.SendAsync();
 
-            await email.SendAsync();
-
-            return RedirectToAction("Index", "Contact");
+                return RedirectToAction("Index", "Contact");
+            }       
+            else
+            {
+                return View("Index");
+            }
         }
     }
 }

@@ -224,9 +224,6 @@ a:is(:link, :active, :visited).active {
 }
 
 @media(max-width: 767px) {
-    .navbar-toggler {
-        left: 35px;
-    }
 
     #my-name {
         transition: all 0.5s ease-out;
@@ -238,17 +235,27 @@ a:is(:link, :active, :visited).active {
 .navbar-toggler {
     border: 0;
     box-shadow: none;
-    position: relative;
     left: 20px;
+    position: relative;
     transition: all 0.5s ease-out;
+    border: 0 !important;
 }
 
-.navbar-toggler span {
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        border: 0 !important;
+    }
+
+/* Lines of the Toggler */
+.toggler-icon {
     display: block;
     height: 2px;
-    width: 25px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    width: 33px;
+    margin-top: 7px;
+    margin-bottom: 7px;
     position: relative;
     left: 0;
     opacity: 1;
@@ -257,36 +264,44 @@ a:is(:link, :active, :visited).active {
     background-color: white;
 }
 
-.navbar-toggler-icon {
-    background-color: white;
+/* Adds Space between the lines */
+.middle-bar {
+    margin: 5px auto;
 }
 
-.navbar-toggler span:nth-child(1) {
-    margin-top: 0.3em;
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
 }
 
-.navbar-toggler:not(.collapsed) span:nth-child(1) {
-    transform: translate(15%, -33%) rotate(45deg);
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(2) {
+.navbar-toggler .middle-bar {
     opacity: 0;
 }
 
-.navbar-toggler:not(.collapsed) span:nth-child(3) {
-    transform: translate(15%, 33%) rotate(-45deg);
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
 }
 
-.navbar-toggler span:nth-child(1) {
-    transform: translate(0%, 0%) rotate(0deg);
-}
-
-.navbar-toggler span:nth-child(2) {
+.navbar-toggler.collapsed .middle-bar {
     opacity: 1;
 }
 
-.navbar-toggler span:nth-child(3) {
-    transform: translate(0%, 0%) rotate(0deg);
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: white;
 }
 
 .navbar-toggler:focus {
@@ -1094,3 +1109,6 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
     font-size: 17px;
 }
 
+.validation-span {
+    margin-left: 5%;
+}
