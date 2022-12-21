@@ -4,7 +4,6 @@ html {
 }
 
 body {
-    padding-top: 0;
     margin: 0;
     padding: 0;
     border: none;
@@ -19,6 +18,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+}
+
+.btn:focus {
+    box-shadow: none;
 }
 
 /* cursor */
@@ -221,9 +224,6 @@ a:is(:link, :active, :visited).active {
 }
 
 @media(max-width: 767px) {
-    .navbar-toggler {
-        left: 35px;
-    }
 
     #my-name {
         transition: all 0.5s ease-out;
@@ -235,17 +235,27 @@ a:is(:link, :active, :visited).active {
 .navbar-toggler {
     border: 0;
     box-shadow: none;
-    position: relative;
     left: 20px;
+    position: relative;
     transition: all 0.5s ease-out;
+    border: 0 !important;
 }
 
-.navbar-toggler span {
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        border: 0 !important;
+    }
+
+/* Lines of the Toggler */
+.toggler-icon {
     display: block;
     height: 2px;
-    width: 25px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    width: 33px;
+    margin-top: 7px;
+    margin-bottom: 7px;
     position: relative;
     left: 0;
     opacity: 1;
@@ -254,36 +264,44 @@ a:is(:link, :active, :visited).active {
     background-color: white;
 }
 
-.navbar-toggler-icon {
-    background-color: white;
+/* Adds Space between the lines */
+.middle-bar {
+    margin: 5px auto;
 }
 
-.navbar-toggler span:nth-child(1) {
-    margin-top: 0.3em;
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
 }
 
-.navbar-toggler:not(.collapsed) span:nth-child(1) {
-    transform: translate(15%, -33%) rotate(45deg);
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(2) {
+.navbar-toggler .middle-bar {
     opacity: 0;
 }
 
-.navbar-toggler:not(.collapsed) span:nth-child(3) {
-    transform: translate(15%, 33%) rotate(-45deg);
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
 }
 
-.navbar-toggler span:nth-child(1) {
-    transform: translate(0%, 0%) rotate(0deg);
-}
-
-.navbar-toggler span:nth-child(2) {
+.navbar-toggler.collapsed .middle-bar {
     opacity: 1;
 }
 
-.navbar-toggler span:nth-child(3) {
-    transform: translate(0%, 0%) rotate(0deg);
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: white;
 }
 
 .navbar-toggler:focus {
@@ -444,12 +462,10 @@ a:is(:link, :active, :visited).active {
     .links {
         position: absolute;
         width: 90%;
-        max-width: 849px;
+        max-width: 850px;
         height: 120px;
     }
-    #second-section {
-        height: auto;
-    }
+    
 }
 
 @media (max-width: 767px) {
@@ -653,7 +669,7 @@ a:is(:link, :active, :visited).active {
 @media (max-width: 1199px) {
     .content-container {
         max-width: 850px;
-        width: 95%;
+        width: 100%;
     }
 }
 
@@ -670,6 +686,7 @@ a:is(:link, :active, :visited).active {
     margin-left: 30px;
     font-weight: bold;
     color: white;
+    text-align: center;
 }
 
 .description {
@@ -750,7 +767,7 @@ a:is(:link, :active, :visited).active {
 
 @media (max-width: 1199px) {
     .about-content {
-        width: 90%;
+        width: 100%;
     }
     #about-me {
         max-width: 199px;
@@ -764,6 +781,7 @@ a:is(:link, :active, :visited).active {
 
 @media (max-width: 767px) {
     .about-content {
+        width: 90%;
         height: auto;
         min-height: 400px;
         min-width: auto;
@@ -771,13 +789,13 @@ a:is(:link, :active, :visited).active {
 
     #about-me {
         width: 100%;
-        max-width: 849px;
+        max-width: 850px;
         height: 150px;
     }
 
     #about-me-description {
         width: 100%;
-        max-width: 849px;
+        max-width: 850px;
         text-align: center;
         padding-top: 0;
         min-height: 250px;
@@ -963,4 +981,246 @@ a:is(:link, :active, :visited).active {
     fill: #4bffa5;
     width: 30px;
     margin-bottom: 20px;
+}
+
+.small-section {
+    width: 100%;
+    background-color: #0a0a0a;
+    height: 25vw;
+    justify-content: center;
+    display: grid;
+    align-items: flex-end;
+}
+
+@media (max-width: 1199px) {
+    .small-section {
+        height: 50vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .small-section {
+        height: 60vw;
+        justify-content: left;
+    }
+}
+
+#contact-title-container {
+    width: 250px;
+    height: 100px;
+    right: 250px;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+@media(max-width: 1199px) {
+    #contact-title-container {
+        margin-left: 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    #contact-title-container {
+        right: 0;
+        margin-bottom: 0px;
+    }
+}
+
+#contact-title {
+    font-size: 44px;
+    line-height: 1.3;
+    font-weight: 500;
+    color: white;
+}
+
+@media(max-width: 767px) {
+    #contact-title {
+        font-size: 23px;
+    }
+}
+
+/* mail form */
+#form-div {
+    margin: auto;
+    width: 850px;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background-color: #101010;
+    position: relative;
+    margin-bottom: 70px;
+    padding-bottom: 70px;
+}
+form > #name, #email-input, #msg {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: #101010;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    color: white;
+    margin-top: 40px;
+}
+#msg {
+    resize: none;
+    height: 100px;
+    
+}
+form #name, #email-input, #msg:focus{
+    outline: none;
+}
+form #name:focus, form #email-input:focus, form #msg:focus {
+    color: white;
+    border-bottom: 1px solid #56FEA8;
+    transition: 500ms;
+}
+form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeholder {
+    color: white;
+}
+@media (max-width: 1199px) {
+    #form-div {
+        max-width: 850px;
+        width: 100%;
+        margin: auto;
+        margin-right: 5%;
+        margin-left: 5%;
+   }
+}
+
+#container-for-form {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-anim {
+    color: #bbb;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.validation-span {
+    margin-left: 5%;
+}
+
+#submit-button-container {
+    margin-left: 5%;
+    width: 95%;
+    height: auto;
+}
+
+#contact-info-container {
+    max-width: 1000px;
+    width: 100%;
+    height: 700px;
+    margin-top: 10px;
+}
+
+.contact-info {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.contact-first-div {
+    width: 40%;
+    height: 100%;
+    float: left;
+    background: #bbb;
+}
+
+.contact-second-div {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+.mail-and-address {
+    width: 100%;
+    height: 250px;
+}
+
+.mail, .address {
+    float: left;
+    width: 250px;
+    min-width: 200px;
+    background: #101010;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.mail {
+    margin-left: 10px;
+}
+
+.contact-title {
+    color: white;
+    font-weight: bold;
+}
+
+.address {
+    float: right;
+}
+
+@media(max-width: 1199px) {
+    .address, .mail {
+        width: 220px;
+    }
+}
+
+#contact-description {
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+@media(max-width: 767px) {
+    #contact-info-container {
+        height: 1600px;
+    }
+
+    .contact-first-div {
+        width: 100%;
+        height: 900px;
+    }
+
+    .contact-second-div {
+        width: 100%;
+        height: 700px;
+    }
+    .mail-and-address {
+        height: 400px;
+    }
+
+    .mail, .address {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 20px;
+    }
+    .address {
+        margin-top: 30px;
+    }
+}
+
+a {
+    word-wrap: break-word;
+}
+
+#contact-mail {
+    color: #4bffa5;
+    text-decoration: none;
+    outline: none;
+}
+
+#contact-mail:hover {
+    text-decoration: underline;
 }

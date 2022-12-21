@@ -26,11 +26,11 @@
                     <span id="first-name">Sebastian</span> 
                     <span id="second-name">Majcher</span>
                 </a>
-                <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button id="navbar-toggler" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
                 </button>
                 <div class="navbar-collapse collapse d-xl-inline-flex link-box">
                     <ul class="navbar-nav flex-grow-1 ul-box">
@@ -55,7 +55,7 @@
                             </ul>
                         </li>
                         <li class="nav-item link-animation">
-                            <a class="link-page contact-link" asp-controller="" asp-action=""><span>CONTACT</span></a>
+                            <a class="link-page contact-link" asp-controller="Contact" asp-action="Index"><span>CONTACT</span></a>
                         </li>
                     </ul>
                 </div>

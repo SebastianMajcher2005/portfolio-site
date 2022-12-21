@@ -24,6 +24,9 @@ C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\obj\Debug\net6.0\re
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\obj\Debug\net6.0\portfolio-site.pdb
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\obj\Debug\net6.0\portfolio-site.genruntimeconfig.cache
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\obj\Debug\net6.0\ref\portfolio-site.dll
+C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\obj\Debug\net6.0\portfolio-site.csproj.CopyComplete
+C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\FluentEmail.Core.dll
+C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\FluentEmail.Smtp.dll
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\Humanizer.dll
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\MessagePack.dll
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\MessagePack.Annotations.dll
@@ -74,6 +77,7 @@ C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\Sy
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\System.Composition.TypedParts.dll
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\System.Security.Permissions.dll
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\System.Windows.Extensions.dll
@@ -238,5 +242,3 @@ C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\ru
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\obj\Debug\net6.0\portfolio-site.csproj.CopyComplete
-C:\Users\user\Documents\GitHub\portfolio-site\portfolio-site\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll

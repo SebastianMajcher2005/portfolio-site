@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "w5I/3JpOxgOhZAGa11yHECO3LJRCXqQf5u1vhILWwPoxGMpApKLmloZdEzuBmEDD7B4mRgBf9DCBeaFUXJpg7Q==",
+  "dgSpecHash": "tLSueUiBZaJAXp4EaeJdHMlWyRwMxKMCkumDPr6xJIPkcfXKEKCbn//u1wBI8M/O5LZqS/7geRBSe/4Y4N4hfw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Documents\\GitHub\\portfolio-site\\portfolio-site\\portfolio-site.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\fluentemail.core\\3.0.2\\fluentemail.core.3.0.2.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\fluentemail.smtp\\3.0.2\\fluentemail.smtp.3.0.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",

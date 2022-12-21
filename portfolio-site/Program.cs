@@ -2,7 +2,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddFluentEmail("sebastianmajcher2005@gmail.com")
+    .AddSmtpSender("gmail.com", 25);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
