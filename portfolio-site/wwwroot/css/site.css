@@ -1224,3 +1224,20 @@ a {
 #contact-mail:hover {
     text-decoration: underline;
 }
+
+#not-found-title {
+    color: white;
+    font-size: 90px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    #not-found-title {
+        font-size: 38px;
+        transition: 0.3s ease-in-out;
+    }
+}
