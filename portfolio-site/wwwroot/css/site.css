@@ -1113,3 +1113,114 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
     width: 95%;
     height: auto;
 }
+
+#contact-info-container {
+    max-width: 1000px;
+    width: 100%;
+    height: 700px;
+    margin-top: 10px;
+}
+
+.contact-info {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.contact-first-div {
+    width: 40%;
+    height: 100%;
+    float: left;
+    background: #bbb;
+}
+
+.contact-second-div {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+.mail-and-address {
+    width: 100%;
+    height: 250px;
+}
+
+.mail, .address {
+    float: left;
+    width: 250px;
+    min-width: 200px;
+    background: #101010;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.mail {
+    margin-left: 10px;
+}
+
+.contact-title {
+    color: white;
+    font-weight: bold;
+}
+
+.address {
+    float: right;
+}
+
+@media(max-width: 1199px) {
+    .address, .mail {
+        width: 220px;
+    }
+}
+
+#contact-description {
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+@media(max-width: 767px) {
+    #contact-info-container {
+        height: 1600px;
+    }
+
+    .contact-first-div {
+        width: 100%;
+        height: 900px;
+    }
+
+    .contact-second-div {
+        width: 100%;
+        height: 700px;
+    }
+    .mail-and-address {
+        height: 400px;
+    }
+
+    .mail, .address {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 20px;
+    }
+    .address {
+        margin-top: 30px;
+    }
+}
+
+a {
+    word-wrap: break-word;
+}
+
+#contact-mail {
+    color: #4bffa5;
+    text-decoration: none;
+    outline: none;
+}
+
+#contact-mail:hover {
+    text-decoration: underline;
+}
