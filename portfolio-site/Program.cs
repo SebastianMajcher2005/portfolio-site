@@ -20,7 +20,7 @@ app.Use(async (context, next) =>
 
     if (context.Response.StatusCode == 404)
     {
-        context.Request.Path = "/NotFound/Index";
+        context.Request.Path = "/NotFound";
         await next();
     }
 });

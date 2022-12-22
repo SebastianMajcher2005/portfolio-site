@@ -2,7 +2,7 @@
 
 namespace portfolio_site.Controllers
 {
-    public class NotFound : Controller
+    public class NotFoundController : Controller
     {
         public IActionResult Index()
         {
