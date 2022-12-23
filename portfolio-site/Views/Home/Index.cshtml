@@ -2,7 +2,22 @@
     ViewData["Title"] = "Home";
 }
 <section id="first-section">
-        <a href="#who-i-am-section" class="mouse_btn" id="mouse-btn">
+    <div class="started-content">
+        <div class="logo">
+            <img src=""/>
+        </div>
+    </div>
+    <p class="home-anim"><span class="text-anim home-span-anim"></span></p>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typed = new Typed(".text-anim", {
+            strings: ["Talk is <strong>cheap</strong>", "Show me <strong>the code</strong>","Call me <strong>Sebastian</strong>"],
+            typeSpeed: 100,
+            backSpeed: 25,
+            loop: true
+            });
+        </script>
+        <a href="#who-i-am-section" class="mouse_btn home-btn" id="mouse-btn">
             <i class="fa fa-chevron-down"></i>
         </a>
 </section>
@@ -19,7 +34,7 @@
             <div>
                 <h3>Development</h3>
             </div>
-            <p>I develop in different technologies based on Microsoft (SQL Server, .NET).</p>
+            <p>I develop in technologies based on Microsoft (.NET, SQL Server).</p>
         </div>
         <div class="tab">
             <div>
