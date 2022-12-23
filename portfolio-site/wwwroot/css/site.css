@@ -1241,3 +1241,199 @@ a {
         transition: 0.3s ease-in-out;
     }
 }
+
+/* home page*/
+#seperate {
+    position: relative;
+    margin-top: 100px;
+}
+
+.who-i-am {
+    max-width: 1100px;
+    height: auto;
+    background-color: #101010;
+    z-index: 0;
+    margin: auto;
+}
+
+@media (max-width: 1199px) {
+    .who-i-am {
+        width: 100%;
+    }
+}
+
+.part {
+    width: 50%;
+    height: 600px;
+    
+}
+
+.part-one {
+    float: left;
+}
+
+.part-two {
+    float: right;
+    text-align: center;
+}
+
+.tab {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: auto;
+    background: #333333;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.part-two h2 {
+    font-family: "Roboto Slab", Sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.part-two h4 {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.part-two p{
+    text-align: left;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.tab h3 {
+    font-weight: bold;
+    color: #4bffa5;
+}
+
+@media(max-width: 767px) {
+    .part {
+        width: 100%;
+        height: auto;
+    }
+
+    .part-two h2 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .part-two h4 {
+        font-size: 16px;
+    }
+}
+
+.tab-icon {
+    float: right;
+    fill: #7A7A7A;
+}
+
+.spin {
+    animation: spin-animation 2.5s infinite;
+    display: inline-block;
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.breath {
+    -webkit-animation: breathing 2s ease-out infinite normal;
+    animation: breathing 2s ease-out infinite normal;
+}
+
+@-webkit-keyframes breathing {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+@keyframes breathing {
+    0% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+.tab div {
+    width: 100%;
+    height: 35px;
+}
+
+@media(max-width: 767px) {
+    .tab h3 {
+        font-size: 18px;
+    }
+}
+
+.my-expertise {
+    margin-top: 200px;
+}
+
+@media(max-width: 767px) {
+    .my-expertise {
+        margin-top: 300px;
+    }
+}
+
+.tab p {
+    margin-top: 20px;
+}
+
+.part-two a{
+    font-weight: 400;
+    color: #4bffa5;
+    text-decoration: none;
+}
+
+.hide {
+    border: none;
+    background: none;
+    height: auto;
+}
