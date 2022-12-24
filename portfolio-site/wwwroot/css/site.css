@@ -214,10 +214,6 @@ body {
     top: 4px;
 }
 
-a:is(:link, :active, :visited).active {
-    color: white;
-}
-
 .ul-box {
     position:relative;
     justify-content: right;
@@ -1484,7 +1480,7 @@ a {
 
 @media(max-width: 1199px) {
     .logo {
-        top: 15vh;
+        top: 200px;
         width: 640px;
         height: 560px;
     }
@@ -1499,4 +1495,40 @@ a {
         height: 62vh;
         clip-path: polygon(25% 0, 100% 25%, 80% 100%, 0 85%);
     }
+}
+
+.h-title {
+    margin-left: 0px;
+    margin-top: 185px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    width: 29vw;
+    font-size: 1.35vw;
+    text-align: left;
+}
+
+@media (max-width: 1199px) {
+    .h-title {
+        margin-left: 10vw;
+        margin-top: 250px;
+        width: 320px;
+        max-width: 320px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .h-title {
+        left: 0;
+        top: 50%;
+        padding-right: 50px;
+        font-size: 17px;
+    }
+}
+
+.home-name {
+    color: #4bffa5;
+    font-weight: 700;
 }
