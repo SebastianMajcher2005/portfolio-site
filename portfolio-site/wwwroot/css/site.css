@@ -129,9 +129,19 @@ body {
     padding: 4px 20px;
 }
 
-@media(min-width: 1199px) {
+.navigation-bar a {
+    float: left;
+}
+
+@media(max-width: 1199px) {
+    .navigation-bar {
+        justify-content: center;
+        text-align: center;
+    }
+
     .navigation-bar a {
-        float: right;
+
+        margin: auto;
     }
 }
 
