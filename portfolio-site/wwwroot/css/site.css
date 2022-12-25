@@ -256,7 +256,7 @@ body {
     justify-content: right;
 }
 
-@media(max-width: 767px) {
+@media(max-width: 1199px) {
 
     #my-name {
         transition: all 0.5s ease-out;
@@ -1507,12 +1507,13 @@ a {
     height: 80vh;
     background: black;
     position: relative;
-    display: inline-block;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
-    
+    align-items: center;
+    justify-content: center;
+    display:grid;
 }
 
 @media(max-width: 1199px) {
@@ -1568,4 +1569,22 @@ a {
 .home-name {
     color: #4bffa5;
     font-weight: 700;
+}
+
+#logo-image {
+    height: 100%;
+}
+
+
+@media(max-width: 1199px) {
+    #logo-image {
+        height: 500px;
+    }
+}
+
+@media(max-width: 767px) {
+    #logo-image {
+        margin-top: 50px;
+        height: 90vw;
+    }
 }
