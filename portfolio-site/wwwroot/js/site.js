@@ -63,3 +63,9 @@ document.querySelectorAll(".navbar .active").forEach(function (e) {
         e.classList += " current";
     }
 });
+
+document.querySelectorAll(".navbar .contact-link").forEach(function (e) {
+    if (e.href == current_url) {
+        e.classList += " current-green";
+    }
+});
