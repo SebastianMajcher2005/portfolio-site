@@ -1585,6 +1585,15 @@ a {
 @media(max-width: 767px) {
     #logo-image {
         margin-top: 50px;
-        height: 90vw;
+        height: 100vw;
     }
+}
+
+/* Change background color of navbar links for current page */
+
+.active.current {
+    background-color: #006600;
+    /* Green */
+    color: #FFFFFF;
+    /* White */
 }
