@@ -37,12 +37,16 @@
                         <li class="nav-item">
                             <a class="link-page home-link active" asp-controller="Home" asp-action="Index"><span>HOME</span></a>
                         </li>
+                        <li class="navbar-lines">
+                        </li>
                         <li class="nav-item">
                             <a class="link-page portfolio-link active" asp-controller="Portfolio" asp-action="Index"><span>PORTFOLIO</span></a>
                         </li>
+                        <li class="navbar-lines">
+                        </li>
                         <li class="nav-item about-link">
                             <a class="link-page about-link active" asp-controller="About" asp-action="Index"><span>ABOUT <i class="fa fa-chevron-down"></i></span></a>
-                            <ul>
+                            <ul id="dropdown-container">
                                 <li class="nav-item li-sign">
                                     <a class="link-page cooperation-link active" asp-controller="Cooperation" asp-action="Index"><span>COOPERATION</span></a>
                                 </li>
@@ -54,8 +58,12 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="navbar-lines">
+                        </li>
                         <li class="nav-item">
                             <a class="link-page contact-link"asp-controller="Contact" asp-action="Index"><span>CONTACT</span></a>
+                        </li>
+                        <li class="navbar-lines">
                         </li>
                     </ul>
                 </div>

@@ -10,6 +10,5 @@ namespace portfolio_site.Models
         public string Email { get; set; }
         [Required(ErrorMessage = "Message is required!")]
         public string Message { get; set; }
-
     }
 }

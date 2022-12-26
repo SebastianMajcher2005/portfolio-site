@@ -133,17 +133,6 @@ body {
     float: left;
 }
 
-@media(max-width: 1199px) {
-    .navigation-bar {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .link-page {
-        margin: auto;
-    }
-}
-
 .link-page .watch-only {
     padding: 3px 0px;
 }
@@ -253,6 +242,13 @@ body {
 .ul-box {
     position: relative;
     justify-content: right;
+}
+
+@media(max-width: 1199px) {
+    .ul-box {
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media(max-width: 1199px) {
@@ -379,6 +375,59 @@ body {
     height: 1px;
     background: rgba(255, 255, 255, 0.07);
     margin-top: 50px;
+}
+
+.plus-btn {
+    display: none;
+}
+
+@media(max-width: 1199px) {
+    #dropdown-container {
+        display: block;
+        text-align: center;
+        max-width: 1199px;
+        width: 100%;
+        position: absolute;
+        right: 0px;
+    }
+
+    .cooperation-link, .my-career-path-link {
+        position: unset;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-link {
+        margin-top: 100px;
+    }
+
+    .cooperation-link {
+        margin-top: 7px;
+    }
+
+    .my-career-path-link {
+        margin-top: 3px;
+    }
+
+    .fa-chevron-down {
+        display: none;
+    }
+}
+
+
+.navbar-lines {
+    display: none;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.07);
+    margin-top: 5px;
+    margin-bottom:  5px;
+}
+
+@media(max-width: 1199px) {
+    .navbar-lines {
+        display: block;
+    }
 }
 
 #second-section {
@@ -526,7 +575,7 @@ body {
 /* style of lines */
 
 .line {
-    background-color: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.07);
     width: 1px;
     height: 100000px;
     border: none;
