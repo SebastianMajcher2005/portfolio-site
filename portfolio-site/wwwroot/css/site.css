@@ -111,7 +111,7 @@ body {
     font-weight: 700;
 }
 
-.navigation-bar a:not(.contact-link) {
+.link-page:not(.contact-link) {
     color: rgb(171, 168, 168);
     text-decoration: none;
     font-size: 17px;
@@ -129,7 +129,7 @@ body {
     padding: 4px 20px;
 }
 
-.navigation-bar a {
+.link-page {
     float: left;
 }
 
@@ -139,17 +139,16 @@ body {
         text-align: center;
     }
 
-    .navigation-bar a {
-
+    .link-page {
         margin: auto;
     }
 }
 
-.navigation-bar .watch-only {
+.link-page .watch-only {
     padding: 3px 0px;
 }
 
-.navigation-bar a span {
+.link-page span {
     position: relative;
     display: inline-block;
     -webkit-transition: -webkit-transform 0.3s;
@@ -168,7 +167,7 @@ body {
     }
 }
 
-.navigation-bar a:not(.contact-link) span::before {
+.link-page:not(.contact-link) span::before {
     position: absolute;
     top: 100%; 
     font-weight: 700;
@@ -178,7 +177,7 @@ body {
     color: white;
 }
 
-.navigation-bar a:not(.contact-link):hover span, .navigation-bar a:not(.contact-link):focus span {
+.link-page:not(.contact-link):hover span, .link-page:not(.contact-link):focus span {
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -1589,13 +1588,10 @@ a {
     }
 }
 
-/* Change background color of navbar links for current page */
+/* Change color of navbar links for current page */
 
 .active.current {
-    background-color: #006600;
-    /* Green */
     color: #FFFFFF;
-    /* White */
 }
 
 .contact-link.current-green {
