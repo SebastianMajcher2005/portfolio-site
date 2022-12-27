@@ -40,7 +40,7 @@ document.addEventListener('mousemove', function (e) {
 
 document.addEventListener('mousedown', function () {
     cursor.classList.add('click');
-    cursorinner.classList.add('cursorinnerhover')
+    cursorinner.classList.add('cursorinner')
 });
 
 document.addEventListener('mouseup', function () {

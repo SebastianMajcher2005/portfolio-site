@@ -1,8 +1,3 @@
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -100,7 +95,37 @@ body {
 
 #second-name {
     color: white;
-} 
+}
+
+#navbar-toggler {
+    position: relative;
+    margin-right: 10px;
+}
+
+#my-name {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media(max-width: 1199px) {
+    #my-name {
+        position: relative;
+        margin-left: -20px;
+    }
+}
+
+@media(max-width: 767px) {
+
+    #my-name {
+        transition: all 0.5s ease-out;
+        margin-left: -45px;
+    }
+
+    #navbar-toggler {
+        transition: all 0.5s ease-out;
+        margin-right: -15px;
+    }
+}
 
 .link-page {
     color: rgb(171, 168, 168);
@@ -109,6 +134,7 @@ body {
     text-decoration: none;
     font-size: 17px;
     font-weight: 700;
+    float: left;
 }
 
 .link-page:not(.contact-link) {
@@ -129,31 +155,12 @@ body {
     padding: 4px 20px;
 }
 
-.link-page {
-    float: left;
-}
-
-.link-page .watch-only {
-    padding: 3px 0px;
-}
-
 .link-page span {
     position: relative;
     display: inline-block;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
-}
-
-#my-name {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-@media(max-width: 1199px) {
-    #my-name {
-        transition: all 0.5s ease-out;
-    }
 }
 
 .link-page:not(.contact-link) span::before {
@@ -251,31 +258,21 @@ body {
     }
 }
 
-@media(max-width: 1199px) {
-
-    #my-name {
-        transition: all 0.5s ease-out;
-        position: relative;
-        margin-left: -25px;
-    }
-}
-
 .navbar-toggler {
     border: 0;
     box-shadow: none;
     left: 20px;
     position: relative;
-    transition: all 0.5s ease-out;
     border: 0 !important;
 }
 
-    .navbar-toggler:focus,
-    .navbar-toggler:active,
-    .navbar-toggler-icon:focus {
-        outline: none !important;
-        box-shadow: none !important;
-        border: 0 !important;
-    }
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+outline: none !important;
+box-shadow: none !important;
+border: 0 !important;
+}
 
 /* Lines of the Toggler */
 .toggler-icon {
@@ -311,8 +308,8 @@ body {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
 }
-/* State when navbar is opened (END) */
 
+/* State when navbar is opened (END) */
 /* State when navbar is collapsed (START) */
 .navbar-toggler.collapsed .top-bar {
     transform: rotate(0);
@@ -341,7 +338,6 @@ body {
     position: fixed;
     display: none;
     background: #1E1E1E;
-    /* hides sublists */
     margin: 0;
     padding: 0;
     margin-top: 35px;
@@ -353,9 +349,6 @@ body {
 .navbar li:hover ul ul {
     display: none;
 }
-
-
-/* hides sub-sublists */
 
 .navbar li:hover ul {
     display: block;
@@ -375,10 +368,6 @@ body {
     height: 1px;
     background: rgba(255, 255, 255, 0.07);
     margin-top: 50px;
-}
-
-.plus-btn {
-    display: none;
 }
 
 @media(max-width: 1199px) {
@@ -409,11 +398,10 @@ body {
         margin-top: 3px;
     }
 
-    .fa-chevron-down {
+    .about-link .fa-chevron-down {
         display: none;
     }
 }
-
 
 .navbar-lines {
     display: none;
@@ -573,7 +561,6 @@ body {
 }
 
 /* style of lines */
-
 .line {
     background: rgba(255, 255, 255, 0.07);
     width: 1px;
@@ -581,8 +568,8 @@ body {
     border: none;
     position: fixed;
 }
-/* lines */
 
+/* lines */
 #first-responsive-line {
     margin-right: 849px;
 }
@@ -731,7 +718,6 @@ body {
         margin-left: 260px;
     }
 }
-
 
 /* my career path page */
 .content-container {
@@ -885,6 +871,7 @@ body {
         padding-right: 20px;
         padding-left: 20px;
     }
+
     #image {
         width: 100px;
         height: 100px;
@@ -1057,7 +1044,6 @@ body {
     }
 }
 
-
 .icon {
     fill: #4bffa5;
     width: 30px;
@@ -1132,6 +1118,7 @@ body {
     margin-bottom: 70px;
     padding-bottom: 70px;
 }
+
 form > #name, #email-input, #msg {
     width: 90%;
     margin-right: 5%;
@@ -1144,22 +1131,26 @@ form > #name, #email-input, #msg {
     color: white;
     margin-top: 40px;
 }
+
 #msg {
     resize: none;
     height: 100px;
-    
 }
+
 form #name, #email-input, #msg:focus{
     outline: none;
 }
+
 form #name:focus, form #email-input:focus, form #msg:focus {
     color: white;
     border-bottom: 1px solid #56FEA8;
     transition: 500ms;
 }
+
 form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeholder {
     color: white;
 }
+
 @media (max-width: 1199px) {
     #form-div {
         max-width: 850px;
@@ -1346,7 +1337,6 @@ a {
 .part {
     width: 50%;
     height: 600px;
-    
 }
 
 .part-one {
@@ -1623,7 +1613,6 @@ a {
     height: 100%;
 }
 
-
 @media(max-width: 1199px) {
     #logo-image {
         height: 500px;
@@ -1638,7 +1627,6 @@ a {
 }
 
 /* Change color of navbar links for current page */
-
 .active.current {
     color: #FFFFFF;
 }
