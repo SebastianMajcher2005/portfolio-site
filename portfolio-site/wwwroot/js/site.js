@@ -40,7 +40,7 @@ document.addEventListener('mousemove', function (e) {
 
 document.addEventListener('mousedown', function () {
     cursor.classList.add('click');
-    cursorinner.classList.add('cursorinnerhover')
+    cursorinner.classList.add('cursorinner')
 });
 
 document.addEventListener('mouseup', function () {
@@ -57,5 +57,15 @@ a.forEach(item => {
     });
 })
 
+let current_url = document.location;
+document.querySelectorAll(".navbar .active").forEach(function (e) {
+    if (e.href == current_url) {
+        e.classList += " current";
+    }
+});
 
-
+document.querySelectorAll(".navbar .contact-link").forEach(function (e) {
+    if (e.href == current_url) {
+        e.classList += " current-green";
+    }
+});

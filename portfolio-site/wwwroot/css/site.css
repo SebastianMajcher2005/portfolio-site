@@ -1,8 +1,3 @@
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -100,42 +95,11 @@ body {
 
 #second-name {
     color: white;
-} 
-
-.link-page {
-    color: rgb(171, 168, 168);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 700;
 }
 
-.navigation-bar a {
-    color: rgb(171, 168, 168);
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 700;
-    overflow: hidden;
-    padding: 4px 20px;
-}
-
-@media(min-width: 1199px) {
-    .navigation-bar a {
-        float: right;
-    }
-}
-
-.navigation-bar .watch-only {
-    padding: 3px 0px;
-}
-
-.navigation-bar a span {
+.navbar-toggler {
     position: relative;
-    display: inline-block;
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s;
+    margin-right: 10px;
 }
 
 #my-name {
@@ -145,11 +109,61 @@ body {
 
 @media(max-width: 1199px) {
     #my-name {
-        transition: all 0.5s ease-out;
+        position: relative;
+        margin-left: -20px;
     }
 }
 
-.navigation-bar a span::before {
+@media(max-width: 767px) {
+
+    #my-name {
+        transition: all 0.5s ease-out;
+        margin-left: -45px;
+    }
+
+    .navbar-toggler {
+        transition: all 0.5s ease-out;
+        margin-right: -15px;
+    }
+}
+
+.link-page {
+    color: rgb(171, 168, 168);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    float: left;
+}
+
+.link-page:not(.contact-link) {
+    color: rgb(171, 168, 168);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 4px 20px;
+}
+
+.contact-link {
+    color: #61CE70;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 4px 20px;
+}
+
+.link-page span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.link-page:not(.contact-link) span::before {
     position: absolute;
     top: 100%; 
     font-weight: 700;
@@ -159,11 +173,29 @@ body {
     color: white;
 }
 
-.navigation-bar a:hover span, .navigation-bar a:focus span {
+.link-page:not(.contact-link):hover span, .link-page:not(.contact-link):focus span {
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     transform: translateY(-100%);
     color: white;
+}
+
+.contact-link span::before {
+    color: rgb(86, 254, 168);
+    position: absolute;
+    top: 100%;
+    font-weight: 700;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    color: #4bffa5;
+}
+
+.contact-link:hover span, .contact-link:focus span {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);
+    color: #4bffa5;
 }
 
 .watch-only {
@@ -215,16 +247,14 @@ body {
 }
 
 .ul-box {
-    position:relative;
+    position: relative;
     justify-content: right;
 }
 
-@media(max-width: 767px) {
-
-    #my-name {
-        transition: all 0.5s ease-out;
-        position: relative;
-        margin-left: -25px;
+@media(max-width: 1199px) {
+    .ul-box {
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -233,17 +263,17 @@ body {
     box-shadow: none;
     left: 20px;
     position: relative;
-    transition: all 0.5s ease-out;
     border: 0 !important;
+    transition: all 0.5s ease-out;
 }
 
-    .navbar-toggler:focus,
-    .navbar-toggler:active,
-    .navbar-toggler-icon:focus {
-        outline: none !important;
-        box-shadow: none !important;
-        border: 0 !important;
-    }
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+outline: none !important;
+box-shadow: none !important;
+border: 0 !important;
+}
 
 /* Lines of the Toggler */
 .toggler-icon {
@@ -279,8 +309,8 @@ body {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
 }
-/* State when navbar is opened (END) */
 
+/* State when navbar is opened (END) */
 /* State when navbar is collapsed (START) */
 .navbar-toggler.collapsed .top-bar {
     transform: rotate(0);
@@ -309,7 +339,6 @@ body {
     position: fixed;
     display: none;
     background: #1E1E1E;
-    /* hides sublists */
     margin: 0;
     padding: 0;
     margin-top: 35px;
@@ -321,9 +350,6 @@ body {
 .navbar li:hover ul ul {
     display: none;
 }
-
-
-/* hides sub-sublists */
 
 .navbar li:hover ul {
     display: block;
@@ -343,6 +369,54 @@ body {
     height: 1px;
     background: rgba(255, 255, 255, 0.07);
     margin-top: 50px;
+}
+
+@media(max-width: 1199px) {
+    #dropdown-container {
+        display: block;
+        text-align: center;
+        max-width: 1199px;
+        width: 100%;
+        position: absolute;
+        right: 0px;
+    }
+
+    .cooperation-link, .my-career-path-link {
+        position: unset;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-link {
+        margin-top: 100px;
+    }
+
+    .cooperation-link {
+        margin-top: 7px;
+    }
+
+    .my-career-path-link {
+        margin-top: 3px;
+    }
+
+    .about-link .fa-chevron-down {
+        display: none;
+    }
+}
+
+.navbar-lines {
+    display: none;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.07);
+    margin-top: 5px;
+    margin-bottom:  5px;
+}
+
+@media(max-width: 1199px) {
+    .navbar-lines {
+        display: block;
+    }
 }
 
 #second-section {
@@ -488,16 +562,15 @@ body {
 }
 
 /* style of lines */
-
 .line {
-    background-color: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.07);
     width: 1px;
     height: 100000px;
     border: none;
     position: fixed;
 }
-/* lines */
 
+/* lines */
 #first-responsive-line {
     margin-right: 849px;
 }
@@ -646,7 +719,6 @@ body {
         margin-left: 260px;
     }
 }
-
 
 /* my career path page */
 .content-container {
@@ -800,6 +872,7 @@ body {
         padding-right: 20px;
         padding-left: 20px;
     }
+
     #image {
         width: 100px;
         height: 100px;
@@ -972,7 +1045,6 @@ body {
     }
 }
 
-
 .icon {
     fill: #4bffa5;
     width: 30px;
@@ -1047,6 +1119,7 @@ body {
     margin-bottom: 70px;
     padding-bottom: 70px;
 }
+
 form > #name, #email-input, #msg {
     width: 90%;
     margin-right: 5%;
@@ -1059,22 +1132,26 @@ form > #name, #email-input, #msg {
     color: white;
     margin-top: 40px;
 }
+
 #msg {
     resize: none;
     height: 100px;
-    
 }
+
 form #name, #email-input, #msg:focus{
     outline: none;
 }
+
 form #name:focus, form #email-input:focus, form #msg:focus {
     color: white;
     border-bottom: 1px solid #56FEA8;
     transition: 500ms;
 }
+
 form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeholder {
     color: white;
 }
+
 @media (max-width: 1199px) {
     #form-div {
         max-width: 850px;
@@ -1124,9 +1201,11 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
 
 .contact-first-div {
     width: 40%;
-    height: 100%;
+    height: 80%;
     float: left;
-    background: #bbb;
+    background: black;
+    display: grid;
+    align-items: last baseline;
 }
 
 .contact-second-div {
@@ -1185,7 +1264,7 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
 
     .contact-first-div {
         width: 100%;
-        height: 900px;
+        height: auto;
     }
 
     .contact-second-div {
@@ -1261,7 +1340,6 @@ a {
 .part {
     width: 50%;
     height: 600px;
-    
 }
 
 .part-one {
@@ -1470,12 +1548,13 @@ a {
     height: 80vh;
     background: black;
     position: relative;
-    display: inline-block;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
-    
+    align-items: center;
+    justify-content: center;
+    display:grid;
 }
 
 @media(max-width: 1199px) {
@@ -1531,4 +1610,34 @@ a {
 .home-name {
     color: #4bffa5;
     font-weight: 700;
+}
+
+#logo-image {
+    height: 100%;
+}
+
+@media(max-width: 1199px) {
+    #logo-image {
+        height: 500px;
+    }
+}
+
+@media(max-width: 767px) {
+    #logo-image {
+        margin-top: 50px;
+        height: 100vw;
+    }
+}
+
+/* Change color of navbar links for current page */
+.active.current {
+    color: #FFFFFF;
+}
+
+.contact-link.current-green {
+    color: rgb(86, 254, 168);
+}
+
+#contact-image {
+    width: 100%;
 }

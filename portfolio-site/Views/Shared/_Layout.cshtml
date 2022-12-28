@@ -20,42 +20,50 @@
         <div class="line" id="second-hide-line"></div>
     </div>
     <header>
-        <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-light box-shadow mb-3 navigation-bar" id="navbar">
+        <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-light box-shadow mb-3 navigation-bar navbar-color" id="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand watch-only" id="my-name">
+                <a class="navbar-brand watch-only link-page" id="my-name">
                     <span id="first-name">Sebastian</span> 
                     <span id="second-name">Majcher</span>
                 </a>
-                <button id="navbar-toggler" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button id="navbar-toggler" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="toggler-icon top-bar"></span>
                     <span class="toggler-icon middle-bar"></span>
                     <span class="toggler-icon bottom-bar"></span>
                 </button>
-                <div class="navbar-collapse collapse d-xl-inline-flex link-box">
+                <div class="navbar-collapse collapse d-xl-inline-flex">
                     <ul class="navbar-nav flex-grow-1 ul-box">
                         <li class="nav-item">
-                            <a class="link-page home-link" asp-controller="Home" asp-action="Index"><span>HOME</span></a>
+                            <a class="link-page home-link active" asp-controller="Home" asp-action="Index"><span>HOME</span></a>
                         </li>
-                        <li class="nav-item link-animation">
-                            <a class="link-page portfolio-link" asp-controller="Portfolio" asp-action="Index"><span>PORTFOLIO</span></a>
+                        <li class="navbar-lines">
                         </li>
-                        <li class="nav-item link-animation about-link">
-                            <a class="link-page about-link" asp-controller="About" asp-action="Index"><span>ABOUT <i class="fa fa-chevron-down"></i></span></a>
-                            <ul>
-                                <li class="nav-item link-animation li-sign">
-                                    <a class="link-page cooperation-link" asp-controller="Cooperation" asp-action="Index"><span>COOPERATION</span></a>
+                        <li class="nav-item">
+                            <a class="link-page portfolio-link active" asp-controller="Portfolio" asp-action="Index"><span>PORTFOLIO</span></a>
+                        </li>
+                        <li class="navbar-lines">
+                        </li>
+                        <li class="nav-item about-link">
+                            <a class="link-page about-link active" asp-controller="About" asp-action="Index"><span>ABOUT <i class="fa fa-chevron-down"></i></span></a>
+                            <ul id="dropdown-container">
+                                <li class="nav-item li-sign">
+                                    <a class="link-page cooperation-link active" asp-controller="Cooperation" asp-action="Index"><span>COOPERATION</span></a>
                                 </li>
                                 <li class="li-sign">
                                     <div id="dropdown-line"></div>
                                 </li>
-                                <li class="nav-item link-animation li-sign">
-                                    <a class="link-page my-career-path-link" asp-controller="MyCareerPath" asp-action="Index"><span>MY CAREER PATH</span></a>
+                                <li class="nav-item li-sign">
+                                    <a class="link-page my-career-path-link active" asp-controller="MyCareerPath" asp-action="Index"><span>MY CAREER PATH</span></a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item link-animation">
-                            <a class="link-page contact-link" asp-controller="Contact" asp-action="Index"><span>CONTACT</span></a>
+                        <li class="navbar-lines">
+                        </li>
+                        <li class="nav-item">
+                            <a class="link-page contact-link"asp-controller="Contact" asp-action="Index"><span>CONTACT</span></a>
+                        </li>
+                        <li class="navbar-lines">
                         </li>
                     </ul>
                 </div>
@@ -68,7 +76,7 @@
         </main>
     </div>
      <div class="sticky-email">
-        E: <a href="mailto:sebastianmajcher2005@gmail.com"> sebastianmajcher2005@gmail.com</a>
+        E: <a href="mailto:sebastianmajcher2005@gmail.com">sebastianmajcher2005@gmail.com</a>
     </div>
     <div class="follow-me">
         <p>Follow Me</p>
