@@ -1201,9 +1201,11 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
 
 .contact-first-div {
     width: 40%;
-    height: 100%;
+    height: 80%;
     float: left;
-    background: #bbb;
+    background: black;
+    display: grid;
+    align-items: last baseline;
 }
 
 .contact-second-div {
@@ -1262,7 +1264,7 @@ form #name:focus::placeholder,#email-input:focus::placeholder,#msg:focus::placeh
 
     .contact-first-div {
         width: 100%;
-        height: 900px;
+        height: auto;
     }
 
     .contact-second-div {
@@ -1634,4 +1636,8 @@ a {
 
 .contact-link.current-green {
     color: rgb(86, 254, 168);
+}
+
+#contact-image {
+    width: 100%;
 }
