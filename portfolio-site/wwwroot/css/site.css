@@ -1641,3 +1641,33 @@ a {
 #contact-image {
     width: 100%;
 }
+
+.projects {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+@media(max-width: 767px) {
+    .projects {
+        padding: 0;
+    }
+    .projects h1 {
+        font-size: 22px;
+    }
+}
+
+#project-img {
+    width: 100%;
+}
+
+.project-description {
+    margin-top: 20px;
+}
+
+#tech-stack {
+    font-size: 14px;
+}
+
+.project-container {
+    text-align: left;
+}
