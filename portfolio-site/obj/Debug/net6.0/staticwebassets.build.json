@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p68m0qwkCakfmYoxZAHdc+RLJa0LGZ212mx/mbaRXhM=",
+  "Hash": "csmLNeWpjs3tKXYHNjBJuI8LYU2zDjuAehBjIYCMWnU=",
   "Source": "portfolio-site",
   "BasePath": "_content/portfolio-site",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Documents\\GitHub\\portfolio-site\\portfolio-site\\wwwroot\\Resume\\Sebastian Majcher.pdf",
+      "SourceId": "portfolio-site",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Documents\\GitHub\\portfolio-site\\portfolio-site\\wwwroot\\",
+      "BasePath": "_content/portfolio-site",
+      "RelativePath": "Resume/Sebastian Majcher.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Resume\\Sebastian Majcher.pdf"
     }
   ]
 }
